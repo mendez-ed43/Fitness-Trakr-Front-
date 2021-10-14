@@ -18,7 +18,7 @@ const Navigation = ({}) => {
                 <Link to = "/home">Home</Link>
                 <Link to = "/routines">Routines</Link>
                 <Link to = "/account">My Account</Link>
-                {
+                {/* {
                     token ? null : <Link to = "/account/login">Login</Link>
                 }
                 
@@ -28,7 +28,7 @@ const Navigation = ({}) => {
                 
                 {
                     token ? <button type = 'logout' onClick={logOut}>Logout</button> : null
-                }
+                } */}
             </ul>
         </div>
     </nav>

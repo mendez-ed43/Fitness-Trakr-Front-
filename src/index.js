@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import callApi from './CallApi';
-import Homepage from './Homepage';
-import Navigation from './Navigation';
 
-const {REACT_APP_API_URL} = process.env;
+import {
+    Navigation,
+    callApi,
+    Homepage,
+    Routines
+} from './Components'
+
+const {REACT_APP_BASE_URL} = process.env;
 
 const App = () => {
     const [username, setUsername] = useState();
@@ -15,15 +19,18 @@ const App = () => {
     const [activities, setActivities] = useState();
     const [routines, setRoutines] = useState([]);
 
+    console.log( "ReactUrl", `${REACT_APP_BASE_URL}`)
+
     const fetchRoutines = async () => {
         const respObj = await callApi({
             url: '/routines',
             token
         });
-        const routinesData = await respObj.json();
-        if(routinesData) { 
-            setRoutines(routinesData)
-        }
+        console.log("fetchroutines!!!!!!", respObj)
+        // const routinesData = await respObj.json();
+        // if(routinesData) { 
+        //     setRoutines(routinesData)
+        // }
     }
     useEffect(() => {
         fetchRoutines();
@@ -42,12 +49,12 @@ const App = () => {
 
                     </Route> */}
                     
-                    <Route exact path = "/activities">
+                    {/* <Route exact path = "/activities">
                         <Activities />
-                    </Route>
+                    </Route> */}
                     
                     <Route exact path = "/routines">
-                        <Routines routines={routines} setRoutines={setRoutines} token={token} fetchRoutines={fetchRoutines} />
+                        <Routines username = {username} routines={routines} setRoutines={setRoutines} token={token} fetchRoutines={fetchRoutines} />
                     </Route>
                 
                 </Switch>
