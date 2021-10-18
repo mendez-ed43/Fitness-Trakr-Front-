@@ -1,0 +1,124 @@
+.App {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_title {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.mainpostpage {
+    width: 200vh;
+    background-color: teal;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.single_routine {
+    display: flex;
+    align-items: center;
+    
+    padding: 35px;
+    width: 650px;
+    border: 3px solid rgb(3, 3, 3);
+    color: rgb(255, 255, 255);
+    background-color: rgb(75, 50, 78);
+}
+.singlepostview {
+    width: 800vw;
+    display: flex;
+    align-items: center;
+    background-color: teal;
+    padding: 40px 300px 40px 300px;
+
+}
+
+.messageform {
+    color: rgb(230, 233, 210);
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    
+}
+
+.delete_button {
+    background-color: rgb(112, 142, 143);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.backbutton {
+    margin-left: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.detail_butn {
+    display: flex;
+    justify-content:center;
+    /* align-items: center; */
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    width: 75px;
+}
+
+.navlinks {
+    font-family: monospace;
+    font-size: 15px;
+    display: flex;
+    width: 22vw;
+    justify-content: space-between;
+    background-color: rgb(194, 199, 221);
+
+
+    padding: 10px;
+}
+
+
+.newpostform {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    /* font-family: monospace; */
+
+    width: 25vw;
+}
+
+.label {
+    font-family: monospace;
+    font-size: 18px;
+    background-color: rgb(20, 160, 160);
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #000000;
+    background-color: #27e2e2d5;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10px;
+}
+.singlemessage {
+    padding: 5px 5px 5px 5px;
+    width: 10rem;
+    color: rgb(234, 238, 220);
+    background-color: rgb(86, 42, 107);
+}
+.messagesheader {
+    margin-top: 15px;
+}
+
+#links {
+    color: antiquewhite;
+}
